@@ -5,6 +5,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\JWTAuthController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Middleware\JwtMiddleware;
+use App\Http\Controllers\GoogleMapsController;
+
 
 Route::prefix('auth')->group(function () {
     Route::post('register', [JWTAuthController::class, 'register']);
@@ -22,4 +24,8 @@ Route::prefix('profile')->group(function () {
         Route::post('add-pin', [ProfileController::class, 'addPin']);
         Route::post('add-name-email', [ProfileController::class, 'addNameandEmail']);
     });
+});
+
+Route::prefix('maps')->group(function () {
+    Route::get('/directions', [GoogleMapsController::class, 'getDirections']);
 });

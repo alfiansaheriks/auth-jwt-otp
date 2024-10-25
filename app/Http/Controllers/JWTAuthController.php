@@ -91,8 +91,8 @@ class JWTAuthController extends Controller
     // Send OTP to WhatsApp using Zenziva API
     protected function sendOtpToWhatsApp($phoneNumber, $otp)
     {
-        $userkey = '121035334eda'; // Your Zenziva userkey
-        $passkey = '9e6087bf8befad27e6cd1d66'; // Your Zenziva passkey
+        $userkey = 'userkey'; // Your Zenziva userkey
+        $passkey = 'passkey'; // Your Zenziva passkey
         $my_brand = 'Ayo Ojek'; // Customize the brand name
         $url = 'https://console.zenziva.net/waofficial/api/sendWAOfficial/';
 
